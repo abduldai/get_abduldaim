@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SA.css">
+    <title>نظام المهندس/ عبدالدائم</title>
+</head>
+
+<body dir="rtl">
+    <div class="crud">
+
+        <div class="head">
+
+            <div class="bo">
+
+                <h2>نظام</h2>
+                <p>لادارة السلع</p>
+            </div>
+
+        </div>
+
+        <div class="inputs">
+            <input type="text" id="tatal" placeholder="اسم الصنف">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="سعر الصنف">
+                <input onkeyup="getTotal()" type="number" id="texts" placeholder="الضرايب 0">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="الاعلانات 0">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="الخصم 0">
+                <small id="total"></small>
+            </div>
+            <input type="number" id="count" placeholder="كم منتج ">
+            <input type="text" id="category" placeholder="نوع المنتج">
+            <button id="subm">اضافة المنتج</button>
+        </div>
+
+        <div class="outputs">
+            <div class="searchblok">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="بحث  عن منتج">
+
+                <div class="btnsearch">
+                    <button onclick="getsershmod(this.id)" id="searchtit">Search By Title</button>
+                    <button onclick="getsershmod(this.id)" id="searchcot">Search By Category</button>
+                </div>
+            </div>
+            <div id="daleteAll">حذف الكل</div>
+            <table>
+                <tr>
+                    <th>الرقم</th>
+                    <th>الاسم</th>
+                    <th>السعر</th>
+                    <th>الضرايب</th>
+                    <th>الاعلانات</th>
+                    <th>الخصم</th>
+                    <th>الاجمالي</th>
+                    <th>نوع الصنف</th>
+                    <th>تعديل </th>
+                    <th>حذف</th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+    <script src="SA.js"></script>
+</body>
+
+</html>
